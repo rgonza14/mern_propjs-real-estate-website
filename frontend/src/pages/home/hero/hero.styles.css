@@ -1,0 +1,36 @@
+.hero {
+    background-image: url("./../../../assets/images/hero.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 60rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero__info {
+    width: 80rem;
+    padding: 10px;
+    position: relative;
+}
+.hero__button-wrapper {
+    position: absolute;
+    bottom: -6rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and(max-width: 600px) {
+    .hero__button-wrapper {
+        bottom: -10rem;
+    }
+}
+
+@media screen and(max-width: 940px) {
+    .hero__info {
+        width: 30rem;
+    }
+}

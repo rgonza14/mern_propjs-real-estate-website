@@ -1,0 +1,112 @@
+.prop-detail__wrapper {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.prop-detail__container,
+.prop-detail__col {
+    display: flex;
+    gap: 2rem;
+}
+
+.prop-detail__col {
+    flex-direction: column;
+}
+
+.prop-detail__col:first-of-type {
+    width: 800px;
+}
+
+.prop-detail__agent {
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.prop-detail__image {
+    background-image: url(./../../../assets/images/house1.jpg);
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 2rem;
+    padding: 15px 10px;
+    border: 1.5px solid #eaeaea;
+    border-radius: 3px;
+}
+
+.prop-detail__card {
+    background-color: #fff;
+    border: 1.5px solid #eaeaea;
+    border-radius: 3px;
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.prop-detail__description {
+    padding: 15px 10px;
+}
+
+.prop-detail__agent-picture {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+.prop-detail__agent-contact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #595959;
+    font-size: 20px;
+    margin: 1rem 0;
+}
+
+.icons-detail {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border-color: #e7e7e7;
+    border-top: 1px solid;
+    border-top-color: #e7e7e7;
+
+    padding: 15px 10px;
+}
+.prop-detail__icons-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.icons-detail__info {
+    font-size: 24px;
+}
+
+@media (max-width: 767.98px) {
+    .prop-detail__container {
+        flex-direction: column;
+    }
+    .prop-detail__image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .prop-detail__wrapper {
+        width: 85%;
+    }
+    .prop-detail__col:first-of-type {
+        width: auto;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .prop-detail__wrapper {
+        width: 80%;
+    }
+    .prop-detail__image {
+        height: 350px;
+    }
+
+    .icons-detail {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

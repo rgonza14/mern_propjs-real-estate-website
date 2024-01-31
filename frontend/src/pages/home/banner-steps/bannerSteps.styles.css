@@ -1,0 +1,29 @@
+.banner-steps {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+.banner-steps__item {
+    text-align: center;
+}
+
+.banner-steps__title {
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+@media screen and (max-width: 768px) {
+    .banner-steps {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .banner-steps__title {
+        font-size: 16px;
+    }
+}
+
+@media screen and(max-width: 940px) {
+    .banner-steps__title {
+        font-size: 1rem;
+    }
+}

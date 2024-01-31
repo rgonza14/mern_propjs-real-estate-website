@@ -1,0 +1,19 @@
+.map-container {
+    width: 100%;
+    height: 300px;
+}
+@media screen and (max-width: 986px) {
+    .map-container {
+        width: 100%;
+    }
+}
+
+.map-with-places-container {
+    width: 650px;
+    height: 400px;
+}
+
+.map-searchbar {
+    width: 350px;
+    margin-bottom: 15px;
+}
