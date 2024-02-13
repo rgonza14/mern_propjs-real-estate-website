@@ -39,6 +39,7 @@ const ContactScreen = () => {
                         src={`https://maps.googleapis.com/maps/api/staticmap?markers=${coords.lat},${coords.lng}&center=${coords.lat},${coords.lng}&zoom=18&size=400x400&key=${VITE_GOOGLE_MAPS_API_KEY}`}
                         alt='mapa estatico'
                         className='contact-info__map'
+                        loading='lazy'
                     />
                 </div>
 

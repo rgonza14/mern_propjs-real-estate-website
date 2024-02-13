@@ -41,6 +41,7 @@ const GridProperties = () => {
                         src={item.image}
                         alt='Foto de la propiedad'
                         className='property__image'
+                        loading='lazy'
                     />
                     <div className='property__info'>
                         <Paragraph

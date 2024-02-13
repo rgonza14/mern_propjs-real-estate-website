@@ -123,6 +123,7 @@ const PropertyDetail = () => {
                                 src={activeAgent?.image || defaultProfile}
                                 alt='agente'
                                 className='prop-detail__agent-picture'
+                                loading='lazy'
                             />
 
                             <div>
