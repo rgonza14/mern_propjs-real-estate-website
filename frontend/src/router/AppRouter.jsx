@@ -13,62 +13,71 @@ import { useAuthStore } from "../hooks/useAuthStore";
 import FormProperty from "../components/form/FormProperty";
 import NotFound from "../components/not-found/NotFound";
 import AdminManager from "../pages/admin/admin-manager/AdminManager";
+import ScrollToTop from "./ScrollToTop";
 
 const AppRouter = () => {
     const { status } = useAuthStore();
 
     return (
         <BrowserRouter>
-            <Routes>
-                {status === "authenticated" ? (
-                    <>
-                        <Route path='/admin' element={<LayoutDashboard />}>
-                            <Route path='/admin' element={<AdminScreen />} />
+            <ScrollToTop>
+                <Routes>
+                    {status === "authenticated" ? (
+                        <>
+                            <Route path='/admin' element={<LayoutDashboard />}>
+                                <Route
+                                    path='/admin'
+                                    element={<AdminScreen />}
+                                />
 
-                            <Route
-                                path='/admin/properties'
-                                element={<GetProperties />}
-                            />
-                            <Route
-                                path='/admin/properties/:idProperty'
-                                element={<FormProperty />}
-                            />
-                            <Route
-                                path='/admin/agent-manager'
-                                element={<AgentManager />}
-                            />
-                            <Route
-                                path='/admin/admin-manager'
-                                element={<AdminManager />}
-                            />
-                            <Route
-                                path='/admin/form-property'
-                                element={<FormProperty />}
-                            />
-                            <Route path='/admin/*' element={<NotFound />} />
-                        </Route>
-                    </>
-                ) : (
-                    <>
-                        <Route path='/admin/*' element={<LoginScreen />} />
-                        <Route path='/' element={<LayoutMain />}>
-                            <Route path='/' element={<HomeScreen />} />
-                            <Route
-                                path='properties'
-                                element={<PropertiesScreen />}
-                            />
-                            <Route
-                                path='properties/:idProperty'
-                                element={<PropertyDetail />}
-                            />
+                                <Route
+                                    path='/admin/properties'
+                                    element={<GetProperties />}
+                                />
+                                <Route
+                                    path='/admin/properties/:idProperty'
+                                    element={<FormProperty />}
+                                />
+                                <Route
+                                    path='/admin/agent-manager'
+                                    element={<AgentManager />}
+                                />
+                                <Route
+                                    path='/admin/admin-manager'
+                                    element={<AdminManager />}
+                                />
+                                <Route
+                                    path='/admin/form-property'
+                                    element={<FormProperty />}
+                                />
+                                <Route path='/admin/*' element={<NotFound />} />
+                            </Route>
+                        </>
+                    ) : (
+                        <>
+                            <Route path='/admin/*' element={<LoginScreen />} />
+                            <Route path='/' element={<LayoutMain />}>
+                                <Route path='/' element={<HomeScreen />} />
+                                <Route
+                                    path='properties'
+                                    element={<PropertiesScreen />}
+                                />
+                                <Route
+                                    path='properties/:idProperty'
+                                    element={<PropertyDetail />}
+                                />
 
-                            <Route path='contact' element={<ContactScreen />} />
+                                <Route
+                                    path='contact'
+                                    element={<ContactScreen />}
+                                />
 
-                            <Route path='/*' element={<NotFound />} />
-                        </Route>
-                    </>
-                )}
-            </Routes>
+                                <Route path='/*' element={<NotFound />} />
+                            </Route>
+                        </>
+                    )}
+                </Routes>
+            </ScrollToTop>
         </BrowserRouter>
     );
 };

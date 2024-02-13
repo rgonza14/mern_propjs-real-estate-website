@@ -47,6 +47,7 @@ const PropertyDetail = () => {
 
     useEffect(() => {
         startLoadingPropertyById(idProperty);
+        window.scrollTo(0, 0);
         return () => {
             setActiveProperty(null);
         };
