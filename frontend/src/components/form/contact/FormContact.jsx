@@ -23,8 +23,8 @@ const FormContact = () => {
     };
 
     const onClickButtonSend = async evt => {
-        setModalIsOpen(true);
         try {
+            setModalIsOpen(true);
             await client.post("/send", formValues);
             toast.success("Mensaje enviado correctamente", {
                 autoClose: 2500,
@@ -32,10 +32,12 @@ const FormContact = () => {
             });
             setFormValues(initialState);
             setErrors(undefined);
-            setModalIsOpen(false);
+
             return;
         } catch ({ response }) {
             setErrors(response.data.errors);
+        } finally {
+            setModalIsOpen(false);
         }
     };
 

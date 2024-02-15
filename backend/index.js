@@ -59,7 +59,7 @@ app.post(
             from: `${process.env.ACCOUNT_EMAIL}`,
             to: request.body.email,
             subject: "Propjs",
-            text: `Hola, ${request.body.full_name}. \nQueríamos notificarte que hemos recibido correctamente tu consulta y a la brevededad nos pondemos en contacto contigo. \n\nSaludos atte. Equipo de Propjs.`
+            text: `Hola, ${request.body.full_name}. \nQueríamos notificarte que hemos recibido correctamente tu consulta y a la brevedad nos pondemos en contacto contigo. \n\nSaludos atte. Equipo de Propjs.`
         };
 
         Promise.all([
